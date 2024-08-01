@@ -113,9 +113,5 @@ def start_cli():
     start_new_search(starting_path)
 
 if __name__ == "__main__":
-    if platform.system() != "Linux":
-        print("Error: This app is only supported on Linux")
-        exit(1)
-    else:
         load_settings()
         start_cli()
