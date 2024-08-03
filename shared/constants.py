@@ -1,3 +1,5 @@
+# Constants
+
 ARQEX_SETTINGS_PATH = "settings.json"
 ARQEX_DB_PATH = "arqex_db.json"
 DEFAULT_SETTINGS = {
