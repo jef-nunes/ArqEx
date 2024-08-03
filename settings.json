@@ -1,5 +1,5 @@
 {
     "language":"en",
     "arq_skip_directories":["__pycache__"],
-    "arq_skip_files": ["settings.json", "project_utils.py", "arqex.py"]
+    "arq_skip_files": ["settings.json", "project_utils.py", "arqex.py"],
 }
