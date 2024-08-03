@@ -1,0 +1,7 @@
+{
+    "selected_language_code":"en",
+    "selected_language_index":0,
+    "arqex_skip_project_directories":["__pycache__","data","shared"],
+    "arqex_skip_project_files": ["main.py","arqex_data.py","arqex_stats.py","ui_handler.py","/data/arqex_db.json",
+    "/shared/constants.py","/shared/arqex_settings.json", "/shared/utils.py"]
+}
