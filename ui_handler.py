@@ -64,7 +64,7 @@ class UserInterface:
                      "Escolha uma linguagem pelo indice: \n 0: Inglês \n [Enter]: Manter a interface em português, retornar ao menu principal"]]
     @classmethod
     def option_set_language(cls) -> Void:
-        language_index = input(f"{cls.ui_text[cls.selected_language_index][6]}\n")
+        language_index = str(input(f"{cls.ui_text[cls.selected_language_index][6]}\n"))
         if language_index is None or len(language_index) is 0:
             cls.main_menu()
             return
@@ -73,7 +73,7 @@ class UserInterface:
             while language_index not in [0,1] and language_index is not None:
                 print(cls.ui_text[cls.selected_language_index][5])
                 language_index = input(f"{cls.ui_text[cls.selected_language_index][6]}\n")
-            if language_index is None or len(language_index) is 0:
+            if language_index is None or len(str(language_index)) is 0:
                 cls.main_menu()
             if language_index < len(cls.language_list):
                 try:
@@ -165,9 +165,10 @@ class UserInterface:
             \r\r{res}      {blue}|_________________________________________________________________|")
             print(res)
 
-        user_input = str(input(f"\n{blue}{cls.ui_text[cls.selected_language_index][4]}{res}"))
+        user_input = str(input(f"\n{res}\t{blue}{cls.ui_text[cls.selected_language_index][4]}{blue}"))
         while user_input not in valid_main_menu_input_options:
-            user_input = str(input(f"\n{blue}{cls.ui_text[cls.selected_language_index][5]}{res}"))
+            user_input = str(input(f"\n{res}\t{blue}{cls.ui_text[cls.selected_language_index][5]}"))
+        print({res})
         if user_input == "2":
             cls.option_new_search()
         elif user_input.upper() == "L":
