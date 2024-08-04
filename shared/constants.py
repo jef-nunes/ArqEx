@@ -18,25 +18,15 @@ for p in _skip_dir + _skip_file:
     _p = _p.resolve()
     SKIP_PROJECT_PATHS.append(_p)
 SKIP_PROJECT_PATHS = list(set(SKIP_PROJECT_PATHS))
-
-
-
-UI_LANGUAGES = ["en","pt_br"]
-
-UI_TEXT = [["ArqEx",
-                        "Enter a starting directory path, absolute or relative, without quotes: ",
-                        "Invalid path provided, try again: ",
-                        "Program started at"],
-                    ["ArqEx",
-                     "Informe o path de diretorio inicial, absoluto ou relativo, sem aspas: ",
-                     "O path fornecido é inválido, tente novamente:",
-                     "Programa iniciado em"]]
-
 ARQEX_SETTINGS_DEFAULT = {
-        "language":"en",
-        "arq_skip_directories":["__pycache__"],
-        "arq_skip_files": ["settings.json", "project_utils.py", "arqex.py"]
-    }
+    "ui_selected_language_code": "en",
+    "ui_selected_language_index": 0,
+    "arqex_search_base_path": None,
+    "arqex_auto_save_relatory": True,
+    "arqex_skip_project_directories":["__pycache__","data","shared"],
+    "arqex_skip_project_files": ["main.py","arqex_data.py","arqex_stats.py","ui_handler.py","/data/arqex_db.json",
+    "/shared/constants.py","/shared/arqex_settings.json", "/shared/utils.py"]
+}
 
 # debug
 #print(SKIP_PROJECT_PATHS)
